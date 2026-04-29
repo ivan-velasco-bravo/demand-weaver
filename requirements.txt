@@ -4,3 +4,4 @@ dagster
 streamlit
 pytrends
 requests
+python-dotenv
