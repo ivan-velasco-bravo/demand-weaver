@@ -216,3 +216,19 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Demand Weaver local/generated files
+*.duckdb
+*.db
+*.sqlite
+
+# Local environment files
+.env
+.env.local
+
+# Processed/generated data
+data/processed/*
+!data/processed/.gitkeep
+# Raw source data files
+data/raw/keggles_ecomerce_dataset/*.csv
+.vscode/
