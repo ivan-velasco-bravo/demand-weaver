@@ -1,0 +1,6 @@
+pandas
+duckdb
+dagster
+streamlit
+pytrends
+requests
