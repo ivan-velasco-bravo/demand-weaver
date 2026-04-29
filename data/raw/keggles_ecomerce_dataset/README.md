@@ -43,7 +43,22 @@ These tables are enough to validate product-level revenue analysis over time.
 - `FACT_ORDERS.date_id` is stored as a `YYYY-MM-DD` string, while other fact tables may use `YYYYMMDD` integer date keys.
 - Date fields may need casting before joins.
 - This folder is used for raw source files only. Transformed outputs should go in `data/processed/`.
+- Some source files (e.g. FACT_ORDERS.csv) exceed GitHub’s 100MB file size limit.
+- Full datasets should be stored locally or externally and are not fully version-controlled in this repository.
 
 ## Attribution
 
 This project uses data from the Kaggle dataset listed above. No endorsement by the original author is implied.
+
+
+## Data Storage (DuckDB)
+
+The project uses DuckDB as a local analytical database.
+
+- The database file is stored at: `data/processed/demand_weaver.duckdb`
+- Tables are created from CSV files via an ingestion script
+- Only a subset of the dataset is loaded for the POC
+
+### Notes
+- DuckDB CLI may require manual installation in some environments
+- Large raw datasets are not fully stored in the repository due to GitHub size limits
